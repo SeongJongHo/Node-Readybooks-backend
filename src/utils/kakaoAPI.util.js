@@ -1,8 +1,10 @@
-module.exports = class KakaoAPI {
+class KakaoAPI {
 
-    constructor(kakao_token){ this.kakao_token= kakao_token; }
+    constructor(kakao_token){
+        this.kakao_token= kakao_token; 
+    }
 
-    get_kakao_user(){
+    getKakaoUser(){
         this.kakao_url= "https://kapi.kakao.com/v2/user/me";
         this.headers= {"Authorization":"Bearer " + this.kakao_token};
         
@@ -17,9 +19,13 @@ module.exports = class KakaoAPI {
                     resolve(this.kakao_data)
                 }
                 else{
-                    reject(error)
+                    reject(false)
                 }
             })
         }) 
     }
+}
+
+module.exports = {
+
 }
