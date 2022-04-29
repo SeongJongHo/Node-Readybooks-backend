@@ -1,1 +1,0 @@
-module.exports = (asyncRouter) => (req,res,next)=> asyncRouter(req,res,next).catch(next);
