@@ -1,8 +1,7 @@
 const kakaoAPI = require('../middleware/kakaoAPI').kakaoAPI
 
-module.exports ={
-    kakaoLogin: async(token)=>{
-
+const kakaoSignIn = ()=>{
+    try{
         return {
             token: token,
             user_id: user.id,
@@ -10,4 +9,10 @@ module.exports ={
             user_profile_img: user.profile_img,
         }
     }
+    catch(err){
+
+    }
+}
+module.exports = {
+    kakaoSignIn
 }
